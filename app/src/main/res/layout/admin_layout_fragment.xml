@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/search_icon_dum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittext_background"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_icon"
+            android:layout_marginLeft="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search admin for details..."
+            android:layout_marginLeft="12dp"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/add_Admin_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:background="@drawable/layout_background">
+
+            <TextView
+                android:id="@+id/add_Admin_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:text="Add Admin   "
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_add_Admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@id/add_teacher_text"
+                android:src="@drawable/add_icon"
+                app:backgroundTint="@color/floating_button" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/text_for_add_admin_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*only Admin of similar or lower access level can be add by this admin account."
+            android:textColor="@android:color/black"
+            android:layout_below="@id/add_Admin_btn"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginBottom="96dp"
+            android:textAlignment="center"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/edit_Admin_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/layout_background1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Edit Admin Details"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_for_edit_admin_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*only details of Admin of lower access level can be editted by this admin account."
+            android:textColor="@android:color/black"
+            android:layout_below="@id/edit_Admin_details"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginBottom="96dp"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

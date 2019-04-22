@@ -1,0 +1,109 @@
+<resources>
+    <string name="app_name">Admin Portal-Roots</string>
+    <string name="hash_name">"@vishu_don"</string>
+
+    <string-array name="division_teacher">
+        <item>Select Division</item>
+        <item>B>Tech</item>
+        <item>MBA</item>
+        <item>BCA</item>
+        <item>MCA</item>
+    </string-array>
+
+    <string-array name="sub_division_teacher">
+        <item>Select Sub Division</item>
+        <item>CS</item>
+        <item>IT</item>
+        <item>CIVIL</item>
+        <item>ECE</item>
+    </string-array>
+
+    <string-array name="year_teacher">
+        <item>Select Year</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="section_teacher">
+        <item>Select Section</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+
+
+
+<!--for student arrays -->
+    <string-array name="division_student">
+        <item>Select Division</item>
+        <item>B.Tech</item>
+        <item>M.Tech</item>
+        <item>BCA</item>
+        <item>MCA</item>
+    </string-array>
+
+    <string-array name="sub_division_student">
+        <item>Select Sub Division</item>
+        <item>CS</item>
+        <item>IT</item>
+        <item>CIVIL</item>
+        <item>ECE</item>
+    </string-array>
+
+    <string-array name="year_student">
+        <item>Select Year</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="section_student">
+        <item>Select Section</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+
+
+    <!--for admin arrays -->
+    <string-array name="division_Admin">
+        <item>Select Division</item>
+        <item>B.Tech</item>
+        <item>M.Tech</item>
+        <item>BCA</item>
+        <item>MCA</item>
+    </string-array>
+
+    <string-array name="sub_division_Admin">
+        <item>Select Sub Division</item>
+        <item>CS</item>
+        <item>IT</item>
+        <item>CIVIL</item>
+        <item>ECE</item>
+    </string-array>
+
+    <string-array name="year_Admin">
+        <item>Select Year</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="section_Admin">
+        <item>Select Section</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,29 @@
+query getDetails($email:String!,$accKey:Int!,$mCase:Int,$name:String)
+{
+  getDetails(email:$email,accKey:$accKey,mCase:$mCase,name:$name){
+    error
+    result
+  }
+}
+
+query getStats($mcase:String!,$email:String!,$accKey:String!){
+  getData(mCase:$mcase,email:$email,accKey:$accKey){
+    students
+    teachers
+    admins
+  }
+}
+
+query GetInsDiv($accKey: String!) {
+      instituteDivision(mCase: "1", accKey: $accKey) {
+        id
+        result
+      }
+    }
+    
+mutation AddUsers($mCase:String!,$accKey:String!,$userTypeId:String!,$email:String!,$div1Name:String,$div2Name:String,$divYear:String,$divSection:String){
+   newUser(mCase:$mCase, accKey:$accKey,userTypeId:$userTypeId,email:$email,div1Name:$div1Name,div2Name:$div2Name,divYear:$divYear,divSection:$divSection){
+    result
+  }
+}
+

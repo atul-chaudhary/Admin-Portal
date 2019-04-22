@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#123A5F</color>
+    <color name="colorPrimaryDark">#0C2D48</color>
+    <color name="colorAccent">#123A5F</color>
+    <color name="bottom_nav">#F5F5F5</color>
+    <color name="fragment_button">#F8F8F8</color>
+    <color name="floating_button">#1057B4</color>
+    <color name="edit_text_color">#707070</color>
+
+
+</resources>

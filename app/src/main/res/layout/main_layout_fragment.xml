@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/users_fragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:clickable="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/main_lay_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/institute_logo"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/mietlogo" />
+
+            <TextView
+                android:id="@+id/institute_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/institute_logo"
+                android:text="Meerut Institute of Technology"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/vert_dots" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/admin_layImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_lay_tab">
+
+            <TextView
+                android:id="@+id/Admin_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:text="Admin"
+                android:textColor="@android:color/white"
+                android:textSize="34dp" />
+
+            <TextView
+                android:id="@+id/access_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@id/Admin_text"
+                android:gravity="bottom"
+                android:text="access level:Top"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/admin_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/admin_image" />
+
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/admin_layImage">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="-16dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="24dp">
+
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/bottom_nav_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/bottom_nav"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/bottom_navigation_bar" />
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/bottomsheet_layout" />
+
+<!-- <include layout="@layout/bottomsheet_layout_student" />
+
+    <include layout="@layout/bottomsheet_layout_admin" />
+-->
+
+</android.support.design.widget.CoordinatorLayout>

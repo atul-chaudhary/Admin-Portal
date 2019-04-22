@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview_layout_teachers"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="-16dp"
+    app:cardCornerRadius="16dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/top_layout_text_teacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/close_btn_bottomSheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/cross" />
+
+
+            <TextView
+                android:id="@+id/bottomSheet_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:text="Add Teacher"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_inBulk_layout_bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_layout_text_teacher"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/dialog_layout_background">
+
+            <TextView
+                android:id="@+id/addbulk_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Add in bulk"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+
+
+            <Button
+                android:id="@+id/upload_.csv_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addbulk_text"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/background_for_csv_btn"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="Upload .csv file to processs"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:layout_centerHorizontal="true"/>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/or_textview_bottomSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_inBulk_layout_bottomSheet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="or"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/or_textview_bottomSheet"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/dialog_layout_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="10dp"
+                android:text="Add one by one"
+                android:textColor="@android:color/black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/new_users_emailid_bottomSheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginTop="26dp"
+                android:hint="New Email Id"
+                android:textColor="@color/colorPrimary"
+                android:maxLines="1"
+                android:inputType="text"/>
+
+            <Spinner
+                android:id="@+id/select_users_division"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_users_emailid_bottomSheet"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp" />
+
+            <Spinner
+                android:id="@+id/select_users_subdivision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/select_users_division"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:visibility="gone"/>
+
+
+            <Spinner
+                android:id="@+id/select_users_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/select_users_subdivision"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:visibility="gone"/>
+
+            <Spinner
+                android:id="@+id/select_users_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/select_users_year"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:visibility="gone"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/FAB_btn_bottomSheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/select_users_section"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/done_icon"
+                app:backgroundTint="@android:color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

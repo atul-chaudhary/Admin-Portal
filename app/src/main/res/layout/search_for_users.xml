@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_relative_layout_search_found">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/searchView_for_usersAndAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        app:defaultQueryHint="search for users"
+        android:singleLine="true"
+        android:focusable="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_for_searchview"
+        app:queryBackground="@android:color/transparent"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_for_users_search"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/searchView_for_usersAndAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/searchView_for_usersAndAdmin"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ripple_loading"
+        android:layout_marginBottom="-16dp"/>
+
+    <TextView
+        android:id="@+id/not_found_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#C0C0C0"
+        android:visibility="gone"
+        android:layout_below="@id/animation_view"
+        android:layout_centerHorizontal="true"
+        android:text="not found, hooman"/>
+
+</RelativeLayout>
