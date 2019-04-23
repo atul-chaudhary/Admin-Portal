@@ -650,6 +650,81 @@
                             },
                             "isDeprecated": false,
                             "deprecationReason": null
+                        },
+                        {
+                            "name": "userDivisionUpdate",
+                            "description": null,
+                            "args": [
+                                {
+                                    "name": "userId",
+                                    "description": null,
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "Int",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "div1Name",
+                                    "description": null,
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "String",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "div2Name",
+                                    "description": null,
+                                    "type": {
+                                        "kind": "NON_NULL",
+                                        "name": null,
+                                        "ofType": {
+                                            "kind": "SCALAR",
+                                            "name": "String",
+                                            "ofType": null
+                                        }
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "divYear",
+                                    "description": null,
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                },
+                                {
+                                    "name": "divSection",
+                                    "description": null,
+                                    "type": {
+                                        "kind": "SCALAR",
+                                        "name": "String",
+                                        "ofType": null
+                                    },
+                                    "defaultValue": null
+                                }
+                            ],
+                            "type": {
+                                "kind": "OBJECT",
+                                "name": "details",
+                                "ofType": null
+                            },
+                            "isDeprecated": false,
+                            "deprecationReason": null
                         }
                     ],
                     "inputFields": null,
@@ -1603,15 +1678,15 @@
                     "onField": true
                 },
                 {
-                    "name": "aws_subscribe",
-                    "description": "Tells the service which mutation triggers this subscription.",
+                    "name": "aws_auth",
+                    "description": "Directs the schema to enforce authorization on a field",
                     "locations": [
                         "FIELD_DEFINITION"
                     ],
                     "args": [
                         {
-                            "name": "mutations",
-                            "description": "List of mutations which will trigger this subscription when they are called.",
+                            "name": "cognito_groups",
+                            "description": "List of cognito user pool groups which have access on this field",
                             "type": {
                                 "kind": "LIST",
                                 "name": null,
@@ -1678,15 +1753,15 @@
                     "onField": false
                 },
                 {
-                    "name": "aws_auth",
-                    "description": "Directs the schema to enforce authorization on a field",
+                    "name": "aws_subscribe",
+                    "description": "Tells the service which mutation triggers this subscription.",
                     "locations": [
                         "FIELD_DEFINITION"
                     ],
                     "args": [
                         {
-                            "name": "cognito_groups",
-                            "description": "List of cognito user pool groups which have access on this field",
+                            "name": "mutations",
+                            "description": "List of mutations which will trigger this subscription when they are called.",
                             "type": {
                                 "kind": "LIST",
                                 "name": null,
