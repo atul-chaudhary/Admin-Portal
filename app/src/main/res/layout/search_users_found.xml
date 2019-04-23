@@ -186,6 +186,17 @@
             android:src="@drawable/edit_icon"
             app:backgroundTint="@android:color/white" />
 
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/user_found_done_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/users_found_section"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:src="@drawable/done_icon"
+            android:visibility="gone"
+            app:backgroundTint="@android:color/white" />
+
     </RelativeLayout>
 
 </RelativeLayout>

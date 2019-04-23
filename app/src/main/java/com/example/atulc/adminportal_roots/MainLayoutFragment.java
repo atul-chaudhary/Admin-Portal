@@ -336,6 +336,8 @@ public class MainLayoutFragment extends Fragment {
                             runMutation();
                         }
                     }
+
+                    //Log.e(TAG, "onClick: <>>>>>>>>>>>>>>>>>>>>>>"+getyear_+".,,,,,,,,," +getSection);
                 }
             }
         });
