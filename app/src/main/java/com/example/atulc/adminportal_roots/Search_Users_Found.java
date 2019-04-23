@@ -13,13 +13,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.amazonaws.demo.posts.AddUsersMutation;
 import com.amazonaws.demo.posts.GetInsDivQuery;
+import com.amazonaws.demo.posts.UserDivisonUpdateMutation;
 import com.amazonaws.mobile.config.AWSConfiguration;
 import com.amazonaws.mobileconnectors.appsync.AWSAppSyncClient;
 import com.amazonaws.mobileconnectors.appsync.fetcher.AppSyncResponseFetchers;
@@ -93,7 +97,7 @@ public class Search_Users_Found extends Fragment {
 
         animationView = view.findViewById(R.id.animation_view1);
         user_found_done_btn = view.findViewById(R.id.user_found_done_btn);
-
+        ImageView search_user_found_back_btn = view.findViewById(R.id.search_user_found_back_btn);
 
         RelativeLayout search_users_found_main_layout = view.findViewById(R.id.relative_layout_for_search_users_found);
         search_users_found_main_layout.setEnabled(false);
@@ -196,12 +200,20 @@ public class Search_Users_Found extends Fragment {
 
                 if (getDivsion != null && getSubdividion_ != null) {
                     if (getyear_ == null && getSection == null) {
-                        //runMutation();
+                        runMutation();
                     } else {
-                        //runMutation();
+                        runMutation();
                     }
                 }
 
+            }
+        });
+
+        search_user_found_back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getActivity().onBackPressed();
             }
         });
 
@@ -591,5 +603,55 @@ public class Search_Users_Found extends Fragment {
         });
 
     }
+
+    public void runMutation() {
+
+        Log.e(TAG, "runMutation: ");
+        UserDivisonUpdateMutation userDivisonUpdateMutation = UserDivisonUpdateMutation.builder().
+                userId(userId).
+                div1Name(getDivsion).
+                div2Name(getSubdividion_).
+                divYear(getyear_).
+                divSection(getSection).
+                build();
+
+        mAWSAppSyncClient.mutate(userDivisonUpdateMutation).enqueue(mutationCallback);
+    }
+
+    private GraphQLCall.Callback<UserDivisonUpdateMutation.Data> mutationCallback = new GraphQLCall.Callback<UserDivisonUpdateMutation.Data>() {
+        @Override
+        public void onResponse(@Nonnull Response<UserDivisonUpdateMutation.Data> response) {
+
+            Log.e(TAG, "add users techer " + response.data().userDivisionUpdate().result());
+            final String mResultMutation = response.data().userDivisionUpdate().result();
+            if(mResultMutation.equals("success")){
+
+                runOnUiThread(new Runnable() {
+                    @SuppressLint("RestrictedApi")
+                    @Override
+                    public void run() {
+
+                        Toast.makeText(getContext(), mResultMutation, Toast.LENGTH_SHORT).show();
+                        user_found_done_btn.setVisibility(View.GONE);
+                        user_found_editButton.setVisibility(View.VISIBLE);
+                        user_found_course.setEnabled(false);
+                        user_found_branch.setEnabled(false);
+                        user_found_year.setEnabled(false);
+                        user_found_section.setEnabled(false);
+
+                    }
+                });
+
+            }else {
+                Toast.makeText(getContext(),"Something went wrong",Toast.LENGTH_SHORT).show();
+            }
+
+        }
+
+        @Override
+        public void onFailure(@Nonnull ApolloException e) {
+            Log.e(TAG, e.toString());
+        }
+    };
 
 }

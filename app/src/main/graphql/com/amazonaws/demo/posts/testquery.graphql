@@ -27,3 +27,9 @@ mutation AddUsers($mCase:String!,$accKey:String!,$userTypeId:String!,$email:Stri
   }
 }
 
+mutation userDivisonUpdate($userId:Int!,$div1Name:String!,$div2Name:String!,$divYear:String,$divSection:String){
+  userDivisionUpdate(userId:$userId,div1Name:$div1Name,div2Name:$div2Name,divYear:$divYear,divSection:$divSection){
+    error
+    result
+  }
+}
